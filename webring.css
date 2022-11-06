@@ -1,0 +1,32 @@
+.wr-ring {
+    box-sizing: border-box;
+    border: 5px double currentColor;
+    border-radius: 1em;
+    padding: 1em;
+    font-family: sans-serif;
+}
+.wr-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.wr-current {
+    text-align: center;
+}
+.wr-transfer {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid currentColor;
+    margin: 1em 0 0 0;
+    padding-top: 1em;
+}
+.wr-previous {
+
+}
+.wr-next {
+
+}
+.wr-list {
+
+}
