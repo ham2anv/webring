@@ -1,10 +1,23 @@
+const source = "source.json"
+
 class Webring extends HTMLElement {
     constructor() {
         super();
 
+        // fetch(source)
+        //     .then(response => response.json())
+        //     .then(value => {this.ringData=value;this.make()});
     }
 
     connectedCallback() {
+        fetch(this.getAttribute("source"))
+        .then(response => response.json())
+        .then(value => {this.ringData=value;this.make()});
+    }
+
+    make() {
+        console.log(this.ringData);
+        
         const shadow = this.attachShadow({mode: "open"});
 
         const ring = createElement('div','wr-ring');
@@ -39,7 +52,7 @@ class Webring extends HTMLElement {
         const style = createElement('style');
         style.textContent = `
         .wr-ring {
-            width: max-content;
+            max-width: max-content;
         }
         .wr-title {
             font-weight: bold;
