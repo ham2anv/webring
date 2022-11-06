@@ -9,7 +9,7 @@ list of ring pages.
 Creating your own web ring is easy. Just create a new GitHub repo using this one as a template:
 ![image](https://user-images.githubusercontent.com/17101837/200187999-6bfedf4c-8a36-4ba8-bdbf-3cc5e4dbb24a.png)
 
-Make sure your new repo is public, then [activate GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) for it.
+Make sure your new repo is public, then [activate GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) for it.
 
 Once you have your repo set up, you need to edit the `source.json` file, adding your ring's title,
 description, and each of the pages you want to have in your ring.
