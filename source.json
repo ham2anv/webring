@@ -1,10 +1,18 @@
-[
-    {
-        "title": "Site #1",
-        "url": "https://www.nothingventuredgames.com"
-    },
-    {
-        "title": "Site #2",
-        "url": "https://www.nothingventuredgames.com/coding"
-    }
-]
+{
+    "title": "My Web Ring",
+    "list": "https://www.nothingventuredgames.com/products",
+    "sites": [
+        {
+            "title": "Nothing Ventured Games",
+            "url": "https://www.nothingventuredgames.com"
+        },
+        {
+            "title": "Coding Character Sheets",
+            "url": "https://www.nothingventuredgames.com/coding"
+        },
+        {
+            "title": "An Evening's Adventure",
+            "url": "https://www.nothingventuredgames.com/adventure"
+        }
+    ]
+}
