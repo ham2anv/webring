@@ -6,9 +6,7 @@ includes links to the previous and next pages in the ring as well as a central
 list of ring pages.
 
 ## Creating a Ring
-Creating your own web ring is easy. Just create a new GitHub repo using this one as a template:
-![image](https://user-images.githubusercontent.com/17101837/200187999-6bfedf4c-8a36-4ba8-bdbf-3cc5e4dbb24a.png)
-
+Creating your own web ring is easy. Just create a new GitHub repo using this one as a template. 
 Make sure your new repo is public, then [activate GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) for it.
 
 Once you have your repo set up, you need to edit the `source.json` file, adding your ring's title,
@@ -34,11 +32,19 @@ of your GitHub page in `list` and `style`.
 }
 ```
 
-For you ring's list page, you can just use the `index.html` in your GitHub Pages. Or you can put the list
+For your ring's list page, you can just use the `index.html` in your GitHub Pages. Or you can put the list
 on any web page by including two things.
 
 1. A `<script>` element that links to the `webring.js` file in your repo.
 2. A `<web-ring-list>` element with a `source` attribute that points to your `source.json` file.
+
+## Joining a Ring
+Becoming a member of a ring can be as simple as contacting the ring's owner and having them add your
+page to the ring. Once they confirm you have been added, follow the directions below for "Using a Ring."
+
+**Advanced Users**: If both the prospective member _and_ the ring's owner are comfortable with
+GitHub, the member can fork the ring's repository and create a pull request adding their information
+to the `source.json` file. The owner can review these changes and merge them, adding the new member.
 
 ## Using a Ring
 To add a web ring to your page, you must include a `<script>` element that links to
@@ -52,8 +58,12 @@ Then you put a `<web-ring>` element wherever you want the web ring widget to app
 This element must have a `source` attribute that points to the ring's `source.json` file:
 
 ```html
-<web-ring sourc="https://RING_OWNER_USERNAME.github.io/REPO_NAME/source.json"></web-ring>
+<web-ring source="https://RING_OWNER_USERNAME.github.io/REPO_NAME/source.json"></web-ring>
 ```
+
+The widget expects to be found on a page with the exact address found in `source.json`. If you
+include it on another page that isn't in the list, it will default to displaying controls for
+the first page in the ring.
 
 ## Customizing Your Ring
 If you are familiar with CSS, you can customize the appearance of your web ring widget as well
