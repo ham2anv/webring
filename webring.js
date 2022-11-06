@@ -37,7 +37,7 @@ class Webring extends HTMLElement {
         const title = createElement('div','wr-title');
         title.innerText = this.data.title;
 
-        const current = createElement('div','wr-current');
+        const current = createElement('div','wr-description');
         current.innerText = this.data.description || "";
 
         const transfer = createElement('nav','wr-transfer');
