@@ -1,7 +1,7 @@
 {
     "title": "My Web Ring",
     "list": "https://www.nothingventuredgames.com/products",
-    "style": "webring.css",
+    "style": "https://ham2anv.github.io/webring/webring.css",
     "sites": [
         {
             "title": "Nothing Ventured Games",
