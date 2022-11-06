@@ -34,18 +34,46 @@ of your GitHub page in `list` and `style`.
 }
 ```
 
+For you ring's list page, you can just use the `index.html` in your GitHub Pages. Or you can put the list
+on any web page by including two things.
+
+1. A `<script>` element that links to the `webring.js` file in your repo.
+2. A `<web-ring-list>` element with a `source` attribute that points to your `source.json` file.
+
 ## Using a Ring
-To add a web ring to your page, you must include a `script` element that links to
+To add a web ring to your page, you must include a `<script>` element that links to
 the ring's JavaScript file:
 
 ```html
 <script src="https://RING_OWNER_USERNAME.github.io/REPO_NAME/webring.js"></script>
 ```
 
-Then you put a `web-ring` element wherever you want the web ring widget to appear in your page.
+Then you put a `<web-ring>` element wherever you want the web ring widget to appear in your page.
 This element must have a `source` attribute that points to the ring's `source.json` file:
 
 ```html
 <web-ring sourc="https://RING_OWNER_USERNAME.github.io/REPO_NAME/source.json"></web-ring>
 ```
 
+## Customizing Your Ring
+If you are familiar with CSS, you can customize the appearance of your web ring widget as well
+as the ring's list page by editing the `webring.css` file in your repo.
+
+If you are a member putting the widget on your page, you can include your own CSS file to style
+the widget as you see fit. In your `<web-ring>` element, include a `css` attribute that points to
+your CSS file.
+
+This component uses a number of CSS classes to style parts of the widget and the ring list:
+
+- `.wr-ring` styles the container holding the entire widget.
+- `.wr-title` styles the title line of the widget.
+- `.wr-description` styles the description line of the widget.
+- `.wr-transfer` styles the line that holds the ring links.
+- `.wr-previous` styles the "Previous" link.
+- `.wr-next` styles the "Next" link.
+- `.wr-list` styles the "List" link.
+- `.wl-page` styles the ring list page container.
+- `.wl-title` styles the title of the ring list page.
+- `.wl-description` styles the description line of the ring list page.
+- `.wl-list` styles the ordered list that holds the links on the ring list page.
+- `.wl-item` styles the list items for each link on the ring list page.
