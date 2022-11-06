@@ -5,7 +5,7 @@ class Webring extends HTMLElement {
 
     connectedCallback() {
         if (this.hasAttribute("source")) {
-            fetch(this.getAttribute("source"),{method: "GET", mode: "cors", credentials: "omit"})
+            fetch(this.getAttribute("source"))
             .then(response => response.json())
             .then(value => {
                 this.data=value;
