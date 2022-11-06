@@ -16,17 +16,17 @@ class Webring extends HTMLElement {
 
     make() {
         // const currentIndex = this.data.sites.indexOf(this.data.sites.find(({url}) => url == window.location.url))
-        const currentIndex = this.data.sites.indexOf(this.data.sites.find(({url}) => url == "https://www.nothingventuredgames.com/coding"))
-        let previousURL,nextUrl;
+        const currentIndex = Math.max(this.data.sites.indexOf(this.data.sites.find(({url}) => url == window.location.url)),0);
+        let previousIndex,nextIndex;
         if (currentIndex == 0) {
-            previousURL = this.data.sites[this.data.sites.length - 1].url;
-            nextUrl = this.data.sites[currentIndex + 1].url;
+            previousIndex = this.data.sites.length - 1;
+            nextIndex = 1;
         } else if (currentIndex == this.data.sites.length - 1) {
-            previousURL = this.data.sites[currentIndex - 1].url;
-            nextUrl = this.data.sites[0].url;
+            previousIndex = currentIndex - 1;
+            nextIndex = 0;
         } else {
-            previousURL = this.data.sites[currentIndex - 1].url;
-            nextUrl = this.data.sites[currentIndex + 1].url;
+            previousIndex = currentIndex - 1;
+            nextIndex = currentIndex + 1;
         }
 
         
@@ -38,19 +38,19 @@ class Webring extends HTMLElement {
         title.innerText = this.data.title;
 
         const current = createElement('div','wr-current');
-        current.innerText = `You are on: ${document.title}`;
+        current.innerText = this.data.description || "";
 
         const transfer = createElement('nav','wr-transfer');
         
         
         const previous = createElement('div','wr-previous');
-        const prevLink = createElement('a','wr-link',{href: previousURL})
+        const prevLink = createElement('a','wr-link',{href: this.data.sites[previousIndex].url})
         prevLink.innerText = "Previous";
         previous.append(prevLink);
 
         const next = createElement('div','wr-next');
 
-        const nextLink = createElement('a','wr-link',{href: nextUrl})
+        const nextLink = createElement('a','wr-link',{href: this.data.sites[nextIndex].url})
         nextLink.innerText = "Next";
         next.append(nextLink);
 
@@ -59,13 +59,11 @@ class Webring extends HTMLElement {
         listLink.innerText = "List";
         list.append(listLink);
 
+        const style = createElement('link',{rel:'stylesheet',href:(this.getAttribute('css')||this.data.style)});
+
         transfer.append(previous,next,list);
         ring.append(title,current,transfer);
-        shadow.append(ring);
-
-        const style = createElement('link',{rel:'stylesheet',href:(this.getAttribute('css')||this.data.style)});
-        
-        shadow.append(style);
+        shadow.append(ring,style);
     }
 }
 
