@@ -30,3 +30,7 @@
 .wr-list {
 
 }
+
+.wr-ring a {
+    color: inherit !important;
+}
