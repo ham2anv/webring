@@ -15,7 +15,6 @@ class Webring extends HTMLElement {
     }
 
     make() {
-        // const currentIndex = this.data.sites.indexOf(this.data.sites.find(({url}) => url == window.location.url))
         const currentIndex = Math.max(this.data.sites.indexOf(this.data.sites.find(({url}) => url == window.location.url)),0);
         let previousIndex,nextIndex;
         if (currentIndex == 0) {
@@ -29,7 +28,6 @@ class Webring extends HTMLElement {
             nextIndex = currentIndex + 1;
         }
 
-        
         const shadow = this.attachShadow({mode: "open"});
 
         const ring = createElement('div','wr-ring');
@@ -41,7 +39,6 @@ class Webring extends HTMLElement {
         current.innerText = this.data.description || "";
 
         const transfer = createElement('nav','wr-transfer');
-        
         
         const previous = createElement('div','wr-previous');
         const prevLink = createElement('a','wr-link',{href: this.data.sites[previousIndex].url})

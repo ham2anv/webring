@@ -1,8 +1,8 @@
 {
     "title": "My Web Ring",
+    "description": "An example ring using the web-ring component.",
     "list": "https://ham2anv.github.io/webring/",
     "style": "https://ham2anv.github.io/webring/webring.css",
-    "description": "An example ring using the web-ring component.",
     "sites": [
         {
             "title": "Nothing Ventured Games",

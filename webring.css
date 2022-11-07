@@ -11,9 +11,6 @@
     text-align: center;
     margin-bottom: 1em;
 }
-.wr-current {
-    text-align: center;
-}
 .wr-transfer {
     display: flex;
     justify-content: space-around;
@@ -21,36 +18,6 @@
     margin: 1em 0 0 0;
     padding-top: 1em;
 }
-.wr-previous {
-
-}
-.wr-next {
-
-}
-.wr-list {
-
-}
-
-.wl-page {
-    padding: 1em;
-}
-
-.wl-title {
-
-}
-
-.wl-description {
-
-}
-
-.wl-list {
-
-}
-
-.wl-item {
-
-}
-
-a {
-    color: inherit !important;
-}
+.wr-description {text-align: center;}
+.wl-page {padding: 1em;}
+a {color: inherit !important;}
