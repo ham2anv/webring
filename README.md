@@ -40,11 +40,13 @@ on any web page by including two things.
 
 ## Joining a Ring
 Becoming a member of a ring can be as simple as contacting the ring's owner and having them add your
-page to the ring. Once they confirm you have been added, follow the directions below for "Using a Ring."
+page to the ring. One easy way to contact the ring owner is to open an issue on the repo and use the Add
+New Member template. This creates an issue that the ring owner can review and accept or reject as
+necessary. Once they confirm you have been added, follow the directions below for "Using a Ring."
 
-**Advanced Users**: If both the prospective member _and_ the ring's owner are comfortable with
-GitHub, the member can fork the ring's repository and create a pull request adding their information
-to the `source.json` file. The owner can review these changes and merge them, adding the new member.
+If both the prospective member _and_ the ring's owner are comfortable with GitHub, the member can fork
+the ring's repository and create a pull request adding their information to the `source.json` file. The
+owner can review these changes and merge them, adding the new member.
 
 ## Using a Ring
 To add a web ring to your page, you must include a `<script>` element that links to
