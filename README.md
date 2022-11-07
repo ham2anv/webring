@@ -35,7 +35,7 @@ of your GitHub page in `list` and `style`.
 For your ring's list page, you can just use the `index.html` in your GitHub Pages. Or you can put the list
 on any web page by including two things.
 
-1. A `<script>` element that links to the `webring.js` file in your repo.
+1. A `<script>` element that links to the `webring-list.js` file in your repo.
 2. A `<web-ring-list>` element with a `source` attribute that points to your `source.json` file.
 
 ## Joining a Ring
